@@ -24,13 +24,12 @@ console.log("filtered Integers: " + filteredIntegers);
 
 // Multiply each remaining number by 1.5 and then subtract 1.
 
-var newIntegers;
+var newIntegers = [];
 function outputNewIntegers(filteredIntegers){
 	newIntegers = (filteredIntegers * 1.5)-1;
 	console.log("New Integers " + newIntegers);
 }
 var newfiltInt = filteredIntegers.forEach(outputNewIntegers);
-
 
 // Then output (either in the DOM or the console) the sum of all the resulting numbers.
 
