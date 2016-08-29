@@ -26,19 +26,19 @@ console.log("filtered Integers: " + filteredIntegers);
 
 function outputNewIntegers(filteredIntegers){
 	newIntegers = (filteredIntegers * 1.5)-1;
-	console.log("New Integers " + newIntegers);
+	return newIntegers;
 }
-var newfiltInt = filteredIntegers.forEach(outputNewIntegers);
+var newfiltInt = filteredIntegers.map(outputNewIntegers);
+console.log("newfiltInt", newfiltInt);
+
 
 // Then output (either in the DOM or the console) the sum of all the resulting numbers.
 
-var newIntegers = [26,18.5,17,15.5,11,9.5,8,3.5,2,.5];
-
 function sumIntegers(preValue, currentValue) {
 	return preValue + currentValue;
-console.log(newIntegers);
+console.log(newfiltInt);
 };
 
-var sumNewIntegers = newIntegers.reduce(sumIntegers);
+var sumNewIntegers = newfiltInt.reduce(sumIntegers);
 console.log("Sum of filtered integers: " + sumNewIntegers);
 
